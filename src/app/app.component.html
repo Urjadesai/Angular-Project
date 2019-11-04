@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+
+<h1 appHighlight>Show ME</h1>
+<app-child [name]='name1' (onNameChanged)=setName($event)></app-child>
+
+<div>
+    <input type="radio" name="gender" (click)="color='green'">Male
+    <input type="radio" name="gender" (click)="color='yellow'">Female
+    <input type="radio" name="gender" (click)="color='red'">Allien
+</div>
+
+<p [appHighlight]="color">Welcome to the Jungle</p>
+<p [appHighlight]="color" defaultColor= "purple">Helllooooooo</p>
